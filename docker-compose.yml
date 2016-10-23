@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  ghost:
+    image: ghost    
+    volumes:
+      - ./config.js:/var/lib/ghost/config.js
+      - ./themes:/var/lib/ghost/themes
+      - ./apps:/var/lib/ghost/apps
+      - ../ghost-data/data:/var/lib/ghost/data
+      - ../ghost-data/images:/var/lib/ghost/images
+    ports:
+      - "2368:2368"
+
