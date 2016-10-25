@@ -11,4 +11,4 @@ services:
       - ../ghost-data/images:/var/lib/ghost/images
     ports:
       - "2368:2368"
-
+    restart: always
