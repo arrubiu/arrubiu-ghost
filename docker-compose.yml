@@ -2,7 +2,8 @@ version: "2"
 
 services:
   ghost:
-    image: ghost    
+    image: ghost
+    container_name: arrubiu_ghost
     volumes:
       - ./config.js:/var/lib/ghost/config.js
       - ./themes:/var/lib/ghost/themes
@@ -10,5 +11,19 @@ services:
       - ../ghost-data/data:/var/lib/ghost/data
       - ../ghost-data/images:/var/lib/ghost/images
     ports:
-      - "2368:2368"
+      - "2368"
     restart: always
+    environment:
+      - VIRTUAL_HOST=localhost
+
+  nginx_service:
+    image: jwilder/nginx-proxy
+    container_name: nginx_server
+    ports:
+      - "80:80"
+#      - "443:443"
+    volumes:
+#      - ./ssl_certs:/etc/nginx/certs
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    environment:
+      - VIRTUAL_PORT=2368 # 3050 port on host does not work!
