@@ -11,12 +11,12 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://arrubiu.local',
+        url: 'http://www.arrubiu.org',
         mail: {},
         database: {
             client: 'sqlite3',
             connection: {
-                filename: path.join(__dirname, '/data/ghost-dev.db')
+                filename: path.join(__dirname, '/data/ghost-live.db')
             },
             debug: false
         },
@@ -36,7 +36,7 @@ config = {
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blog's published URL.
-        url: 'http://localhost',
+        url: 'http://arrubiu.local',
 
         // #### Database
         // Ghost supports sqlite3 (default), MySQL & PostgreSQL
