@@ -213,7 +213,6 @@ blockquote p {
   font-weight: 300;
   margin-top: 1em;
   margin-bottom: 1.2em;
-  text-transform: uppercase;
 }
 .tags {
   font-size: 16px;
@@ -279,7 +278,6 @@ footer section {
   font-size: 18px;
   margin: 0 auto;
   max-width: 600px;
-  text-transform: uppercase;
   width: 90%;
 }
 footer.post-footer {

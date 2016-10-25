@@ -9,8 +9,8 @@
         <header>
 
         <h1 class="post-title">{{{title}}}</h1>
-        <div class="post-meta">pubblicato il <time class="post-date" datetime="{{date format="YYYY-MM-DDTHH:mm:ss.SS\Z"}}">{{date format="D.M.YYYY"}}</time>
-            {{#if tags}}in {{tags}}{{/if}}</div>
+        <div class="post-meta"><time class="post-date" datetime="{{date format="YYYY-MM-DDTHH:mm:ss.SS\Z"}}">{{date format="D.M.YYYY"}}</time>
+            {{#if tags}}- {{tags}}{{/if}}</div>
 
         </header>
 
@@ -41,8 +41,9 @@
                     <div class="authorimage" style="background: url({{author.image}})"></div>
                     <p class="bio">Pubblicato da <a href="/about">{{author.name}}</a> il
                     <time datetime="{{date format="YYYY-MM-DDTHH:mm:ss.SS\Z"}}">{{date format="D.M.YYYY"}}</time>
-                    {{#if tags}}in {{tags}}{{/if}}
-                    (ultimo aggiornamento <time datetime="{{date updated_at format="YYYY-MM-DDTHH:mm:ss.SS\Z"}}">{{date updated_at format="D.M.YYYY"}}).</time>
+                    {{#if tags}}in {{tags}}{{/if}}<br />
+                    Ultimo aggiornamento: <time datetime="{{date updated_at format="YYYY-MM-DDTHH:mm:ss.SS\Z"}}">{{date updated_at format="D.M.YYYY"}}.</time><br />
+                    Se utilizzate o citate i contenuti, citate la fonte :)
                     </p>
                 </section>
             {{/if}}
