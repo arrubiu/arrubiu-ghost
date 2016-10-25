@@ -14,10 +14,12 @@ services:
       - "2368"
     restart: always
     environment:
-      - VIRTUAL_HOST=localhost
+      - VIRTUAL_HOST=arrubiu.local
+      - NODE_ENV=development
 
   nginx_service:
     image: jwilder/nginx-proxy
+    restart: always
     container_name: nginx_server
     ports:
       - "80:80"
