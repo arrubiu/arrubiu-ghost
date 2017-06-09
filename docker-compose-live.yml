@@ -3,5 +3,5 @@ version: "2"
 services:
   ghost:
     environment:
-      - VIRTUAL_HOST=blog.arrubiu.org
+      - VIRTUAL_HOST=www.arrubiu.org
       - NODE_ENV=production
