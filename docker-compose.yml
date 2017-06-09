@@ -2,7 +2,7 @@ version: "2"
 
 services:
   ghost:
-    image: ghost
+    image: ghost:0.11.9
     container_name: arrubiu_ghost
     restart: always
     volumes:
